@@ -672,9 +672,55 @@ th {
 .site-footer {
   margin-top: 2rem;
   border-top: 1px solid var(--line);
-  padding: 1.1rem 0;
+  padding: 1.4rem 0 0.9rem;
   color: var(--muted);
   background: #0b0b0d;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.footer-grid h3,
+.footer-grid h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  max-width: 34ch;
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-links a {
+  color: #e9dfe2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--brand-soft);
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #25252a;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 .hero-grid,
@@ -740,6 +786,16 @@ th {
   }
 
   .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 }
