@@ -43,7 +43,7 @@ INSERT INTO products (name, category, description, price, image_url) VALUES
 ('Butter Chicken', 'Main Courses', 'Creamy tomato butter chicken served with naan.', 10.80, 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800'),
 ('Fish and Chips', 'Main Courses', 'Crispy battered fish with fries and tartar sauce.', 9.90, 'https://images.unsplash.com/photo-1544982503-9f984c14501a?w=800'),
 ('Lamb Kofta Plate', 'Main Courses', 'Seasoned lamb kofta with rice and salad.', 12.30, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800'),
-('Shrimp Fried Rice', 'Main Courses', 'Wok-fried rice with shrimp, egg, and vegetables.', 9.40, 'https://unsplash.com/photos/hands-hold-a-large-sliced-burger-with-pickles-gz-W6F8OgG0'),
+
 ('Paneer Tikka Masala', 'Main Courses', 'Charred paneer cubes in creamy masala gravy.', 9.20, 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800'),
 ('Chicken Shawarma Plate', 'Main Courses', 'Marinated shawarma chicken with garlic sauce and rice.', 9.85, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800'),
 ('Mediterranean Bowl', 'Main Courses', 'Falafel, hummus, couscous, and fresh vegetables.', 8.95, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800'),
