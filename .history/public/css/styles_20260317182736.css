@@ -996,18 +996,6 @@ th {
     grid-template-columns: 1fr;
   }
 
-  .hero-splash {
-    min-height: 460px;
-  }
-
-  .hero-mosaic {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hero-title {
-    font-size: clamp(3.5rem, 14vw, 5rem);
-  }
-
   .menu-btn {
     display: inline-block;
   }
