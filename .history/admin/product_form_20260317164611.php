@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($name === '' || $description === '' || $priceLkr <= 0) {
-        set_flash('error', 'Please enter a product name, description, and valid price.');
+        set_flash('error', 'Name, description and valid price are required.');
         redirect('/admin/product_form.php' . ($isEdit ? '?id=' . $id : ''));
     }
 
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':image_url' => $imageUrl,
             ':id' => $id,
         ]);
-        set_flash('success', 'Product updated.');
+        set_flash('success', 'Product updated successfully.');
     } else {
         $insert = $pdo->prepare('INSERT INTO products (name, category, description, price, image_url) VALUES (:name, :category, :description, :price, :image_url)');
         $insert->execute([
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':price' => $price,
             ':image_url' => $imageUrl,
         ]);
-        set_flash('success', 'New product added.');
+        set_flash('success', 'Product added successfully.');
     }
 
     redirect('/admin/products.php');

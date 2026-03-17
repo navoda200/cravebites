@@ -22,14 +22,14 @@ foreach ($products as $item) {
 
 <section class="wrap section">
     <div class="section-head">
-        <h1>Our Menu</h1>
-        <p>Pick your favorites from mains, sides, and drinks.</p>
+        <h1>Our Products</h1>
+        <p>Choose from our latest meals and snacks.</p>
     </div>
 
     <?php foreach ($sections as $sectionName => $items): ?>
         <div class="section-head">
             <h2><?php echo escape($sectionName); ?></h2>
-            <p><?php echo count($items); ?> options</p>
+            <p><?php echo count($items); ?> items</p>
         </div>
 
         <div class="grid cards">

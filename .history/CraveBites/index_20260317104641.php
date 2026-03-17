@@ -2,7 +2,7 @@
 $pageTitle = 'Home';
 require_once __DIR__ . '/includes/header.php';
 
-$stmt = $pdo->query('SELECT id, name, description, price, image_url FROM products WHERE category = "Main Courses" ORDER BY id DESC LIMIT 3');
+$stmt = $pdo->query('SELECT id, name, description, price, image_url FROM products ORDER BY id DESC LIMIT 3');
 $featuredProducts = $stmt->fetchAll();
 
 $newsStmt = $pdo->query('SELECT id, title, body, published_at FROM news ORDER BY id DESC LIMIT 2');
@@ -14,7 +14,7 @@ $latestNews = $newsStmt->fetchAll();
         <div>
             <p class="kicker">Fresh. Fast. Reliable.</p>
             <h1>Your favorite meals, delivered with care</h1>
-            <p>From quick bites to full meals, CraveBites serves freshly made food you can enjoy every day.</p>
+            <p>CraveBites is your online food business platform with delicious menu options and regular updates.</p>
             <div class="hero-actions">
                 <a class="btn" href="<?php echo url('products.php'); ?>">Explore Menu</a>
                 <a class="btn btn-outline" href="<?php echo url('contact.php'); ?>">Contact Us</a>
@@ -26,7 +26,7 @@ $latestNews = $newsStmt->fetchAll();
 <section class="wrap section">
     <div class="section-head">
         <h2>Featured Products</h2>
-        <a href="<?php echo url('products.php'); ?>">See Full Menu</a>
+        <a href="<?php echo url('products.php'); ?>">View All</a>
     </div>
     <div class="grid cards">
         <?php foreach ($featuredProducts as $item): ?>
@@ -35,7 +35,7 @@ $latestNews = $newsStmt->fetchAll();
                 <div class="card-body">
                     <h3><?php echo escape($item['name']); ?></h3>
                     <p><?php echo escape($item['description']); ?></p>
-                    <strong>LKR <?php echo format_price((float) $item['price']); ?> / portion</strong>
+                    <strong>$<?php echo format_price((float) $item['price']); ?></strong>
                 </div>
             </article>
         <?php endforeach; ?>
@@ -45,7 +45,7 @@ $latestNews = $newsStmt->fetchAll();
 <section class="wrap section">
     <div class="section-head">
         <h2>Latest News</h2>
-        <a href="<?php echo url('news.php'); ?>">View Updates</a>
+        <a href="<?php echo url('news.php'); ?>">Read More</a>
     </div>
     <div class="grid news-grid">
         <?php foreach ($latestNews as $post): ?>

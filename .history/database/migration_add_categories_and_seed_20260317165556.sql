@@ -15,7 +15,7 @@ INSERT INTO products (name, category, description, price, image_url)
 SELECT 'Main Course 02', 'Main Courses', 'Chef special main course platter 02.', 9.10, 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Main Course 02');
 INSERT INTO products (name, category, description, price, image_url)
-SELECT 'Main Course 03', 'Main Courses', 'Chef special main course platter 03.', 9.40, 'https://images.unsplash.com/photo-1604908176997-4317b64dee77?w=800'
+SELECT 'Main Course 03', 'Main Courses', 'Chef special main course platter 03.', 9.40, 'https://images.unsplash.com/photo-1544982503-9f984c14501a?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Main Course 03');
 INSERT INTO products (name, category, description, price, image_url)
 SELECT 'Main Course 04', 'Main Courses', 'Chef special main course platter 04.', 9.70, 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800'
@@ -61,13 +61,13 @@ INSERT INTO products (name, category, description, price, image_url)
 SELECT 'Side 03', 'Sides', 'Crispy side dish 03.', 3.20, 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Side 03');
 INSERT INTO products (name, category, description, price, image_url)
-SELECT 'Side 04', 'Sides', 'Crispy side dish 04.', 3.40, 'https://images.unsplash.com/photo-1543332164-6e82f355bad6?w=800'
+SELECT 'Side 04', 'Sides', 'Crispy side dish 04.', 3.40, 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Side 04');
 INSERT INTO products (name, category, description, price, image_url)
-SELECT 'Side 05', 'Sides', 'Crispy side dish 05.', 3.60, 'https://images.unsplash.com/photo-1604152135912-04a579a1f4ad?w=800'
+SELECT 'Side 05', 'Sides', 'Crispy side dish 05.', 3.60, 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Side 05');
 INSERT INTO products (name, category, description, price, image_url)
-SELECT 'Side 06', 'Sides', 'Crispy side dish 06.', 3.80, 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=800'
+SELECT 'Side 06', 'Sides', 'Crispy side dish 06.', 3.80, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800'
 WHERE NOT EXISTS (SELECT 1 FROM products WHERE name = 'Side 06');
 INSERT INTO products (name, category, description, price, image_url)
 SELECT 'Side 07', 'Sides', 'Crispy side dish 07.', 4.00, 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=800'
