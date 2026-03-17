@@ -35,12 +35,20 @@ This is a complete Web Application Development coursework project built with:
 ## Setup Instructions
 
 1. Install XAMPP/WAMP (or any PHP + MySQL server).
+<<<<<<< HEAD
 2. Copy this project into your server root (for example `htdocs/cravebites`).
+=======
+2. Copy this project into your server root (for example `htdocs/CraveBites`).
+>>>>>>> ed079de693bb639f9a3463aca25c3e1cbe200fe4
 3. Start Apache and MySQL.
 4. Open phpMyAdmin and execute [database/schema.sql](database/schema.sql).
 5. Update database credentials if needed in [config/database.php](config/database.php).
 6. Visit:
+<<<<<<< HEAD
   - `http://localhost/cravebites/index.php`
+=======
+   - `http://localhost/CraveBites/index.php`
+>>>>>>> ed079de693bb639f9a3463aca25c3e1cbe200fe4
 
 ## GitHub Contribution Evidence
 
