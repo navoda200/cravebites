@@ -3,7 +3,6 @@ require_once __DIR__ . '/../includes/bootstrap.php';
 require_admin();
 
 $productCount = (int) $pdo->query('SELECT COUNT(*) FROM products')->fetchColumn();
-$dealCount = (int) $pdo->query('SELECT COUNT(*) FROM deals WHERE is_active = 1')->fetchColumn();
 $contactCount = (int) $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
 
 $pageTitle = 'Admin Dashboard';
@@ -23,9 +22,9 @@ require_once __DIR__ . '/../includes/header.php';
             <a href="<?php echo url('admin/products.php'); ?>">Manage Products</a>
         </article>
         <article class="stat-card">
-            <h3><?php echo $dealCount; ?></h3>
+            <h3>3</h3>
             <p>Featured Deals</p>
-            <a href="<?php echo url('admin/deals.php'); ?>">Manage Deals</a>
+            <a href="<?php echo url('deals.php'); ?>" target="_blank" rel="noopener">Open Deals Page</a>
         </article>
         <article class="stat-card">
             <h3><?php echo $contactCount; ?></h3>

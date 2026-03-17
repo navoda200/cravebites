@@ -4,8 +4,6 @@ require_once __DIR__ . '/includes/header.php';
 
 $stmt = $pdo->query('SELECT id, name, description, price, image_url FROM products WHERE category = "Main Courses" ORDER BY id DESC LIMIT 3');
 $featuredProducts = $stmt->fetchAll();
-
-$homeDeals = $pdo->query('SELECT id, title, short_note FROM deals WHERE is_active = 1 ORDER BY id DESC LIMIT 3')->fetchAll();
 ?>
 
 <section class="hero">
@@ -47,21 +45,21 @@ $homeDeals = $pdo->query('SELECT id, title, short_note FROM deals WHERE is_activ
         <a href="<?php echo url('deals.php'); ?>">View All Deals</a>
     </div>
     <div class="grid news-grid">
-        <?php if ($homeDeals): ?>
-            <?php foreach ($homeDeals as $deal): ?>
-                <article class="news-card">
-                    <h3><?php echo escape($deal['title']); ?></h3>
-                    <p><?php echo escape($deal['short_note']); ?></p>
-                    <small>See full details in Deals.</small>
-                </article>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <article class="news-card">
-                <h3>Deals Coming Soon</h3>
-                <p>We are preparing fresh combo offers for you.</p>
-                <small>Please check back later.</small>
-            </article>
-        <?php endif; ?>
+        <article class="news-card">
+            <h3>Lunch Saver Combo</h3>
+            <p>Main + side + drink at a discounted bundle price.</p>
+            <small>Available every weekday until 3:00 PM.</small>
+        </article>
+        <article class="news-card">
+            <h3>Family Value Combo</h3>
+            <p>Perfect for sharing with generous portions and better savings.</p>
+            <small>Limited slots daily.</small>
+        </article>
+        <article class="news-card">
+            <h3>Weekend Chill Combo</h3>
+            <p>Your favorite comfort picks bundled for the weekend.</p>
+            <small>Friday to Sunday only.</small>
+        </article>
     </div>
 </section>
 

@@ -5,7 +5,8 @@ require_once __DIR__ . '/includes/header.php';
 $stmt = $pdo->query('SELECT id, name, description, price, image_url FROM products WHERE category = "Main Courses" ORDER BY id DESC LIMIT 3');
 $featuredProducts = $stmt->fetchAll();
 
-$homeDeals = $pdo->query('SELECT id, title, short_note FROM deals WHERE is_active = 1 ORDER BY id DESC LIMIT 3')->fetchAll();
+$dealsStmt = $pdo->query('SELECT id, title, short_note FROM deals WHERE is_active = 1 ORDER BY id DESC LIMIT 3');
+$homeDeals = $dealsStmt->fetchAll();
 ?>
 
 <section class="hero">
@@ -52,7 +53,7 @@ $homeDeals = $pdo->query('SELECT id, title, short_note FROM deals WHERE is_activ
                 <article class="news-card">
                     <h3><?php echo escape($deal['title']); ?></h3>
                     <p><?php echo escape($deal['short_note']); ?></p>
-                    <small>See full details in Deals.</small>
+                    <small>Check full details on the Deals page.</small>
                 </article>
             <?php endforeach; ?>
         <?php else: ?>
