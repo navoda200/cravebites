@@ -1,6 +1,6 @@
-# CraveBites Coursework Project
+# CraveBites 
 
-This is a complete Web Application Development coursework project built with:
+This is a complete Web Application Development project built with:
 - HTML
 - CSS
 - JavaScript
