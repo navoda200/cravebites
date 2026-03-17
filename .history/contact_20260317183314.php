@@ -42,7 +42,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input id="email" name="email" type="email" placeholder="navoda@example.com" required>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
                 </div>
 
                 <div class="form-group">
@@ -58,7 +58,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="info-card">
                 <div class="info-icon">📍</div>
                 <h3>Location</h3>
-                <p>42 Homagama Road<br>Homagama, Sri Lanka</p>
+                <p>42 Galle Road<br>Colombo 03, Sri Lanka</p>
             </div>
 
             <div class="info-card">
