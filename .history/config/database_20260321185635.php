@@ -1,9 +1,9 @@
 <?php
-$host = 'sql303.infinityfree.com';
-$dbName = 'if0_41444636_cravebitesdb';
-$user = 'if0_41444636';
-$pass = 'YOUR_VPANEL_PASSWORD';
-$port = '3306';
+$host = getenv('DB_HOST') ?: 'sql303.infinityfree.com';
+$dbName = getenv('DB_NAME') ?: 'if0_41444636_cravebitesdb';
+$user = getenv('DB_USER') ?: 'if0_41444636';
+$pass = getenv('DB_PASS') ?: 'YOUR_VPANEL_PASSWORD';
+$port = getenv('DB_PORT') ?: '3306';
 
 $dsn = "mysql:host={$host};port={$port};dbname={$dbName};charset=utf8mb4";
 
