@@ -2,7 +2,7 @@
 $pageTitle = 'Products';
 require_once __DIR__ . '/includes/header.php';
 
-$stmt = $pdo->query("SELECT id, name, description, price, image_url, category FROM products WHERE name NOT IN ('Shrimp Fried Rice', 'Chicken Alfredo', 'Mac and Cheese Cup', 'Mashed Potatoes', 'Garlic Bread Basket', 'Hot Chocolate') ORDER BY id DESC");
+$stmt = $pdo->query('SELECT id, name, description, price, image_url, category FROM products ORDER BY id DESC');
 $products = $stmt->fetchAll();
 
 $sections = [
@@ -18,6 +18,15 @@ foreach ($products as $item) {
     }
     $sections[$category][] = $item;
 }
+
+$imageOverrides = [
+    'Chicken Alfredo' => 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1200&q=80',
+    'Shrimp Fried Rice' => 'https://images.unsplash.com/photo-1516685018646-549198525c1b?auto=format&fit=crop&w=1200&q=80',
+    'Garlic Bread Basket' => 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80',
+    'Mashed Potatoes' => 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=1200&q=80',
+    'Mac and Cheese Cup' => 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80',
+    'Hot Chocolate' => 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80',
+];
 ?>
 
 <section class="wrap section">
@@ -34,8 +43,9 @@ foreach ($products as $item) {
 
         <div class="grid cards">
             <?php foreach ($items as $item): ?>
+                <?php $imageUrl = $imageOverrides[$item['name']] ?? ($item['image_url'] ?: 'https://placehold.co/600x380/png?text=CraveBites+Menu'); ?>
                 <article class="card">
-                    <img src="<?php echo escape($item['image_url'] ?: 'https://via.placeholder.com/600x380'); ?>" alt="<?php echo escape($item['name']); ?>">
+                    <img src="<?php echo escape($imageUrl); ?>" alt="<?php echo escape($item['name']); ?>">
                     <div class="card-body">
                         <h3><?php echo escape($item['name']); ?></h3>
                         <p><?php echo escape($item['description']); ?></p>

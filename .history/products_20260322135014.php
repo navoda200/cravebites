@@ -2,7 +2,7 @@
 $pageTitle = 'Products';
 require_once __DIR__ . '/includes/header.php';
 
-$stmt = $pdo->query("SELECT id, name, description, price, image_url, category FROM products WHERE name NOT IN ('Shrimp Fried Rice', 'Chicken Alfredo', 'Mac and Cheese Cup', 'Mashed Potatoes', 'Garlic Bread Basket', 'Hot Chocolate') ORDER BY id DESC");
+$stmt = $pdo->query('SELECT id, name, description, price, image_url, category FROM products ORDER BY id DESC');
 $products = $stmt->fetchAll();
 
 $sections = [
